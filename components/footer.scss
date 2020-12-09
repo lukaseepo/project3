@@ -1,0 +1,97 @@
+.footer-section{
+    width: 100%;
+    background-color: $lightgrey;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    .footer-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        border-bottom: 1px solid $grey;
+        padding-bottom: 70px;
+        @media screen and (max-width: 700px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 630px) {
+            grid-template-columns: 1fr;
+        }
+        .footer-item{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 420px;
+            justify-content: space-between;
+            h3{
+                color: $black;
+                font-size: 22px;
+            }
+            .recblack-sm{
+                width: 25px;
+                height: 4px;
+                background-color: $black;
+            }
+            a{
+                color: #727272;
+                font-size: 14px;
+            }
+            .contact-info{
+                width: auto;
+                height: auto;
+                display: flex;
+                .contact-item:hover{
+                    background-color: $pink;
+                    transition: 0.5s;
+                }
+                .contact-item{
+                    width: 40px;
+                    height: 40px;
+                    margin-left: 5px;
+                    background-color: $blue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    i{
+                        color: $white;
+                    }
+               }
+               .pink{
+                   background-color: $pink;
+               }
+            }
+            .shared-hosting{
+                width: 100%;
+                height: auto;
+                display: flex;
+                border-bottom: 1px solid $grey;
+                .image{
+                    width: auto;
+                    height: auto;
+                }
+                .hosting-info{
+                    width: auto;
+                    height: 95px;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 20px;
+                    h4{
+                        color: $black;
+                        font-size: 16px;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: $grey;
+                        padding-left: 3px;
+                    }
+                    span{
+                        padding-top: 30px;
+                        padding-left: 3px;
+                        font-size: 13px;
+                        color: $grey;
+                    }
+                   
+                }
+            }
+        }
+    }
+}

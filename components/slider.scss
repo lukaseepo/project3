@@ -1,0 +1,111 @@
+.slider-section{
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    .slider-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        @media screen and (max-width: 1050px) {
+            grid-template-columns: 1fr;
+        }
+        .web-hosting{
+            width: 100%;
+            height: auto;
+            padding-top: 30px;
+            h3{
+                color: $white;
+                font-size: 56px;
+            }
+            .disk{
+                width: auto;
+                height: auto;
+                margin-top: 30px;
+                .disk-item{
+                    display: flex;
+                    color: $grey;
+                    font-size: 19px;
+                    margin-top: 5px;
+                    h5{
+                        padding-left: 5px;
+                    }
+                }
+            }
+            .start-now{
+                width: 250px;
+                height: 40px;
+                display: flex;
+                background-color: $pink;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
+                color: $white;
+                font-size: 15px;
+                margin-top: 30px;
+                i{
+                    padding-left: 10px;
+                }
+            }
+            .start-now:hover{
+                background-color: $white;
+                color: $black;
+                transition: 0.5s;
+            }
+        }
+        .slider{
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-top: 30px;
+            @media screen and (max-width: 1125px) {
+                img{
+                    width: 100%;
+                }
+            }
+            .circle-pink{
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                background-color: $pink;
+                position: absolute;
+                top: 0px;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                @media screen and (max-width: 1125px) {
+                    display: none;
+                }
+                h4{
+                    color: $white;
+                    padding-top: 8px;
+                }
+            }
+            .circle-white{
+                width: 100px;
+                height: 100px;
+                background-color: $white;
+                display: flex;
+                flex-direction: column;
+                border-radius: 100%;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                right: 130px;
+                @media screen and (max-width: 1125px) {
+                    display: none;
+                }
+                h5{
+                    font-size: 15px;
+                    color: $black;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

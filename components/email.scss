@@ -1,0 +1,43 @@
+.email-section{
+    width: 100%;
+    background-color: $lightgrey;
+    padding-bottom: 120px;
+    .email-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 100px;
+        @media screen and (max-width: 700px) {
+            grid-row-gap: 20px;
+            grid-template-columns: 1fr;
+        }
+        .email-item{
+            width: 100%;
+            height: auto;
+            input{
+                width: 700px;
+                height: 50px;
+                padding-left:15px;
+                border: 1px solid $grey;
+                background-color: $lightgrey;
+                @media screen and (max-width: 1125px) {
+                    width: 50%;
+                }
+            }
+            .submit:hover{
+                background-color: black;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+            .submit{
+                width: 150px;
+                height: 50px;
+                border: 0px;
+                position: absolute;
+                background-color: $blue;
+                color: $white;
+                padding-left: 0px;
+            }
+        }
+    }
+}

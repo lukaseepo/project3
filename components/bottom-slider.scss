@@ -1,0 +1,76 @@
+.bottomslider-section{
+    width: 100%;
+    background-color: $blue;
+    opacity: 1;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 90px;
+    .bottom-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        @media screen and (max-width: 700px) {
+            grid-template-columns: 1fr;
+        }
+        .bottom-slider{
+            width: 100%;
+            height: 400px;
+            position: relative;
+            .circle{
+                width: 120px;
+                height: 120px;
+                border-radius: 100%;
+                background-color: $pink;
+                position: absolute;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h3{
+                    color: $white;
+                    text-align: center;
+                }
+            }
+        }
+        .bottom-info{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            h3{
+                color: $white;
+                font-size: 40px;
+            }
+            h2{
+                font-size: 80px;
+                color: $white;
+                padding-top: 20px;
+                span{
+                    color: $pink;
+                }
+            }
+            p{
+                color: $white;
+                opacity: 0.6;
+                font-size: 16px;
+                padding-top: 20px;
+            }
+            a:hover{
+                background-color: $white;
+                transition: 0.5s;
+                color: $black;
+            }
+            a{
+                width: 150px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                background-color: $pink;
+                color: $white;
+                margin-top: 30px;
+            }
+        }
+    }
+}

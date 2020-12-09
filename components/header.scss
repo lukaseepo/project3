@@ -1,0 +1,49 @@
+.header-section{
+    width: 100%;
+    background-color: #020203;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.8;
+    .header-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        .logo{
+            height: auto;
+            width: 100%;
+        }
+        .nav-bar{
+            width: 100%;
+            display: flex;
+            @media screen and (max-width: 1125px) {
+                display: none;
+            }
+        }
+        .nav-bar li{
+            display: flex;
+            padding-top: 15px;
+            .home{
+                color: $pink;
+            }
+            a{
+                padding-left: 20px;
+                font-size: 14px;
+                color: $white;
+            }
+            a:hover{
+                color: $pink;
+            }
+            i{
+                color: $white;
+                padding-left: 25px;
+                padding-bottom: 5px;
+                font-size: 14px;
+            }
+            i:hover{
+                color: $pink;
+            }
+        }
+    }
+}

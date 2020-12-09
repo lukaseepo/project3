@@ -1,0 +1,125 @@
+@mixin feature {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3{
+        font-size: 27px;
+        color: $black;
+        border-bottom: 1px solid black;
+    }
+    h5{
+        color: $blue;
+        font-size: 18px;
+        padding-top: 15px;
+    }
+}
+@mixin feature-second {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    h3{
+        font-size: 27px;
+        color: $black;
+        border-bottom: 1px solid black;
+    }
+    h5{
+        color: $blue;
+        font-size: 18px;
+        padding-top: 15px;
+    }
+}
+@mixin small-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+$pink: #e54b84;
+$white: #fff;
+$grey: #b1b1b1;
+$black:#333;
+$lightgrey: #f5f5f5;
+$blue: #443b97;
+
+.people-section{
+    width: 100%;
+    background-color: $white;
+    padding-top: 50px;
+    @media screen and (max-width: 1125px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        display: none;
+    }
+    .people-items{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        .feature{
+            @include feature();
+        }
+        .people-item{
+            width: 100%;
+            height: 300px;
+            background-color: $blue;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            padding-left: 90px;
+            padding-right: 90px;
+            padding-top: 90px;
+            margin-bottom: -90px;
+            @media screen and (max-width: 700px) {
+                grid-template-columns: 1fr;
+                grid-row-gap: 20px;
+            }
+            .slide{
+                width: 100%;
+                height: 200px;
+                display: flex;
+                .circle{
+                    width: 150px;
+                    height: 150px;
+                    border: 10px solid palevioletred;
+                    border-radius: 100%;
+                    background-color: #e54b84;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .info{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 20px;
+                    padding-top: 5px;
+                    p{
+                        color: $white;
+                        opacity: 0.6;
+                        font-size: 14px;
+                    }
+                    h6{
+                        font-size: 16px;
+                        color: $white;
+                        padding-top: 20px;
+                    }
+                    h5{
+                        color: $white;
+                        font-size: 14px;
+                        padding-top: 5px;
+                        span{
+                            color: $pink;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
